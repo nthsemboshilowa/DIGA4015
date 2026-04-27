@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSA App</title>
+    <meta name="author" content="Ntshembo Shilowa">
+    <meta name="description" content="Homepage">
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="logo">LOGO</div>
+
+    <nav class="nav-links">
+      <button class="nav-item active" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        <span class="tooltip">Home</span>
+      </button>
+      <button class="nav-item" aria-label="Snapshot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="13" r="4"/><path d="M5 7h2l2-3h6l2 3h2a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"/></svg>
+        <span class="tooltip">Snapshot</span>
+      </button>
+      <button class="nav-item" aria-label="Strategy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M3 12h18M3 18h12"/></svg>
+        <span class="tooltip">Strategy</span>
+      </button>
+      <button class="nav-item" aria-label="Add New">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        <span class="tooltip">Add New</span>
+      </button>
+    </nav>
+
+    <button class="settings-btn" aria-label="Settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      <span class="tooltip">Settings</span>
+    </button>
+  </aside>
+
+  <!-- ── Main ── -->
+  <div class="main-wrap">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="search-wrap">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+      </div>
+
+      <div class="topbar-actions">
+        <!-- Light/Dark toggle -->
+        <div class="toggle-wrap">
+          <button class="icon-btn" id="themeIcon" aria-label="Toggle brightness">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+          <button class="toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Dark mode"></button>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notif-wrap">
+          <button class="icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </button>
+          <span class="notif-dot"></span>
+        </div>
+
+        <!-- Avatar -->
+        <div class="avatar" role="button" tabindex="0" aria-label="User profile"></div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+      <section class="panel">
+        <h1 class="panel-title">Dashboard</h1>
+
+        <div class="card-grid">
+
+          <div class="card" role="button" tabindex="0" aria-label="Money Snapshot">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            </div>
+            <span class="card-label">Money Snapshot</span>
+          </div>
+
+          <div class="card" role="button" tabindex="0" aria-label="Simulation Lab">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-4M9 3V1m0 2h6M15 3V1"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="card-label">Simulation Lab</span>
+          </div>
+
+          <div class="card" role="button" tabindex="0" aria-label="Strategy Tracks">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="card-label">Strategy Tracks</span>
+          </div>
+
+          <div class="card" role="button" tabindex="0" aria-label="Profile">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span class="card-label">Profile</span>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const stored = localStorage.getItem('theme') || 'light';
+    if (stored === 'dark') { body.dataset.theme = 'dark'; toggle.setAttribute('aria-checked', 'true'); }
+
+    function applyTheme(dark) {
+      body.dataset.theme = dark ? 'dark' : '';
+      toggle.setAttribute('aria-checked', String(dark));
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    toggle.addEventListener('click', () => applyTheme(body.dataset.theme !== 'dark'));
+    document.getElementById('themeIcon').addEventListener('click', () => applyTheme(body.dataset.theme !== 'dark'));
+
+    // Nav active state
+    document.querySelectorAll('.nav-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Card keyboard access
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') card.click(); });
+    });
+  </script>
+</body>
+
+</html>
+
