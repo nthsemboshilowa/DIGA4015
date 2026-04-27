@@ -5,10 +5,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABSA App</title>
     <meta name="author" content="Ntshembo Shilowa">
-    <meta name="description" content="Homepage">
-    <link rel="stylesheet" href="/styles/index.css">
+    <meta name="description" content="Simulation Lab">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-    
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__name">ABSA</span>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input class="search" type="text" placeholder="Search anything..." />
+      </div>
+    </div>
+    <div class="topbar__right">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 01-3.46 0"/>
+        </svg>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="avatar">JD</div>
+    </div>
+  </header>
+ 
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar__nav">
+        <a href="../index.html" class="nav-item" data-label="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </a>
+        <a href="../snapshot/index.html" class="nav-item" data-label="Snapshot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </a>
+        <a href="../stretegy/index.html" class="nav-item" data-label="Strategy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+          </svg>
+        </a>
+        <a href="#" class="nav-item active" data-label="Simulation Lab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </a>
+        <a href="#" class="nav-item sidebar__settings" data-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+          </svg>
+        </a>
+      </nav>
+      <nav class="mobile-nav">
+        <a href="../index.html" class="nav-item" data-label="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+        <a href="../snapshot/index.html" class="nav-item" data-label="Snapshot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="21 15 16 10 5 21"/></svg>
+        </a>
+        <a href="#" class="nav-item active" data-label="Lab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </a>
+        <a href="../stretegy/index.html" class="nav-item" data-label="Strategy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        </a>
+        <a href="#" class="nav-item" data-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </a>
+      </nav>
+    </aside>
+ 
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <p class="page-header__eyebrow">Run & compare scenarios</p>
+          <h1 class="page-header__title">Simulation Lab</h1>
+        </div>
+        <button class="icon-btn" style="width:auto;border-radius:50px;padding:0 16px;gap:6px;font-size:0.82rem;font-weight:600;background:var(--text-1);color:var(--surface);height:36px;" onclick="alert('New simulation created!')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Studio
+        </button>
+      </div>
+ 
+      <div class="page-body">
+        <!-- LEFT -->
+        <div class="page-left">
+          <!-- Studios list -->
+          <div class="panel list-panel">
+            <p class="panel__title">List of Studios</p>
+            <div class="list-items">
+              <div class="list-item active" onclick="selectStudio(this,'Rent vs Property','rvp')">
+                <span>Rent vs Property</span>
+                <span class="list-item__arrow">→</span>
+              </div>
+              <div class="list-item" onclick="selectStudio(this,'Local vs Offshore Investment','lvo')">
+                <span>Local vs Offshore Investment</span>
+                <span class="list-item__arrow">→</span>
+              </div>
+              <div class="list-item" onclick="selectStudio(this,'Studio 3','s3')">
+                <span>Studio 3</span>
+                <span class="list-item__arrow">→</span>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Timeline -->
+          <div class="panel timeline-panel">
+            <p class="panel__title">Timeline</p>
+            <div class="timeline-wrap">
+              <div class="timeline-item done">
+                <div class="timeline-item__label">Scenario Defined</div>
+                Rent vs Property parameters set for 20-year projection.
+              </div>
+              <div class="timeline-item done">
+                <div class="timeline-item__label">Assumptions Locked</div>
+                Inflation 5.2%, rental yield 7.1%, bond rate 11.75%.
+              </div>
+              <div class="timeline-item active">
+                <div class="timeline-item__label">Running Simulation</div>
+                Monte Carlo — 1,000 iterations in progress.
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__label">Review Results</div>
+                Compare outcomes across scenarios.
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__label">Export Report</div>
+                Download PDF or share with adviser.
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- RIGHT -->
+        <div class="page-right">
+          <div class="panel graph-panel">
+            <p class="panel__title">Graph View — <span id="graphLabel">Rent vs Property</span></p>
+            <div class="graph-area">
+              <svg viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2d9e6b" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#2d9e6b" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid lines -->
+                <line x1="50" y1="20" x2="50" y2="220" stroke="var(--border)" stroke-width="1"/>
+                <line x1="50" y1="220" x2="440" y2="220" stroke="var(--border)" stroke-width="1"/>
+                <line x1="50" y1="170" x2="440" y2="170" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <line x1="50" y1="120" x2="440" y2="120" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <line x1="50" y1="70" x2="440" y2="70" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <!-- Y labels -->
+                <text x="42" y="224" text-anchor="end" font-size="10" fill="var(--text-3)">0</text>
+                <text x="42" y="174" text-anchor="end" font-size="10" fill="var(--text-3)">1M</text>
+                <text x="42" y="124" text-anchor="end" font-size="10" fill="var(--text-3)">2M</text>
+                <text x="42" y="74" text-anchor="end" font-size="10" fill="var(--text-3)">3M</text>
+                <!-- X labels -->
+                <text x="50"  y="234" text-anchor="middle" font-size="10" fill="var(--text-3)">0yr</text>
+                <text x="148" y="234" text-anchor="middle" font-size="10" fill="var(--text-3)">5yr</text>
+                <text x="246" y="234" text-anchor="middle" font-size="10" fill="var(--text-3)">10yr</text>
+                <text x="344" y="234" text-anchor="middle" font-size="10" fill="var(--text-3)">15yr</text>
+                <text x="440" y="234" text-anchor="middle" font-size="10" fill="var(--text-3)">20yr</text>
+                <!-- Property line (blue) -->
+                <polygon points="50,220 50,218 148,190 246,155 344,108 440,55 440,220" fill="url(#grad-blue)"/>
+                <polyline points="50,218 148,190 246,155 344,108 440,55" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Rent line (green) -->
+                <polygon points="50,220 50,215 148,205 246,195 344,175 440,148 440,220" fill="url(#grad-green)"/>
+                <polyline points="50,215 148,205 246,195 344,175 440,148" fill="none" stroke="#2d9e6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Dots -->
+                <circle cx="440" cy="55"  r="4" fill="#3b82f6"/>
+                <circle cx="440" cy="148" r="4" fill="#2d9e6b"/>
+                <!-- Legend -->
+                <rect x="300" y="30" width="10" height="3" rx="1.5" fill="#3b82f6"/>
+                <text x="314" y="34" font-size="10" fill="var(--text-2)">Property</text>
+                <rect x="300" y="44" width="10" height="3" rx="1.5" fill="#2d9e6b"/>
+                <text x="314" y="48" font-size="10" fill="var(--text-2)">Renting</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+ 
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const sun = toggle.querySelector('.sun-icon');
+    const moon = toggle.querySelector('.moon-icon');
+    let dark = false;
+    toggle.addEventListener('click', () => {
+      dark = !dark;
+      document.body.classList.toggle('dark', dark);
+      sun.classList.toggle('hidden', dark);
+      moon.classList.toggle('hidden', !dark);
+    });
+ 
+    // Studio selection
+    function selectStudio(el, label) {
+      document.querySelectorAll('.list-item').forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('graphLabel').textContent = label;
+    }
+  </script>
 </body>
 </html>
